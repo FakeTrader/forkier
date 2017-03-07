@@ -1481,10 +1481,10 @@ endif;
 //主题自动更新服务
 if (!git_get_option('git_updates_b')):
     require 'modules/updates.php';
-    $example_update_checker = new ThemeUpdateChecker('Git-master', 'https://coding.net/u/googlo/p/File/git/raw/master/info.json'
-    //此处链接不可改
+    $example_update_checker = new ThemeUpdateChecker('Forkier', 'https://raw.githubusercontent.com/AndlsH/forkier/master/inc/info.json'
     );
 endif;
+
 //本地头像
 class Simple_Local_Avatars {
     private $user_id_being_edited;
