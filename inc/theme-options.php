@@ -11,7 +11,7 @@ $options = array(
         'desc'  => '最新消息显示在全站导航条下方，非常给力的推广位置',
         'id'    => "git_tui",
         'type'  => 'textarea',
-        'std'   => '<li>欢迎访问乐趣公园网站，WordPress信息，WordPress教程，推荐使用最新版火狐浏览器和Chrome浏览器访问本网站，欢迎加入乐趣公园<code><a target="_blank" href="http://googlo.me/go/qun"><i class="fa fa-qq"></i> QQ群</a></code></li><li>Git主题现已支持滚动公告栏功能，兼容其他浏览器，看到的就是咯，在后台最新消息那里用li标签添加即可。</li><li>最新版Git主题已支持说说碎语功能，可像添加文章一样直接添加说说，新建说说页面即可，最后重新保存固定连接，<a target="_blank" href="http://googlo.me/shuo.html">演示地址</a></li><li>百度口碑求点赞啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊<a target="_blank" href="http://koubei.baidu.com/s/googlo.me">http://koubei.baidu.com/s/googlo.me</a></li><li>如果您觉得本站非常有看点，那么赶紧使用Ctrl+D 收藏乐趣公园吧</li><li>云落的淘宝店铺已经开张了哦，传送门：<a target="_blank" href="http://shop116317755.taobao.com">http://shop116317755.taobao.com</a></li>'
+        'std'   => '<li>欢迎访问安德斯的空间，推荐使用最新版 Chrome 浏览器访问本网站</li><li>Forkier 主题现已支持滚动公告栏功能，兼容其他浏览器，看到的就是咯，在后台最新消息那里用li标签添加即可。</li><li>最新版Git主题已支持说说碎语功能，可像添加文章一样直接添加说说，新建说说页面即可，最后重新保存固定连接，<a target="_blank" href="http://googlo.me/shuo.html">演示地址</a></li><li>如果您觉得本站非常有看点，那么赶紧使用 Ctrl+D 收藏乐趣公园吧</li>'
     ),
     array(
         'name'  => '友情链接页面',
@@ -133,25 +133,25 @@ $options = array(
     ),
     array(
         'name'  => '流量统计代码',
-        'desc'  => '统计网站流量，推荐使用百度统计，国内比较优秀且速度快；还可使用Google统计、CNZZ等',
+        'desc'  => '统计网站流量，推荐使用百度统计，国内比较优秀且速度快；还可使用 Google 统计、CNZZ 等',
         'id'    => 'git_track',
         'type'  => 'textarea'
     ),
     array(
         'name'  => '网站头部代码',
-        'desc'  => '会自动出现在页面头部（head区域），可放置广告代码等自定义代码的全局代码块',
+        'desc'  => '会自动出现在页面头部（header 区域），可放置广告代码等自定义代码的全局代码块',
         'id'    => 'git_headcode',
         'type'  => 'textarea'
     ),
     array(
-        'name'  => '网站自定义样式CSS',
-        'desc'  => '网站全局CSS代码，可以直接加入css代码，比如：.authorsocial i{font-size:16px;width:20px;height:18px}',
+        'name'  => '网站自定义样式 CSS',
+        'desc'  => '网站全局 CSS 代码，可以直接加入 css 代码，比如：.authorsocial i{font-size:16px;width:20px;height:18px}',
         'id'    => 'git_customcss',
         'type'  => 'textarea'
     ),
     array(
         'name'  => '主题更新设置',
-        'desc'  => '禁止主题更新【 选择后，您将无法收到本主题的更新推送，所以云落墙裂不推荐选择勾选】',
+        'desc'  => '禁用主题更新【禁用更新后，您将无法体验新功能，安全漏洞也得不到即时修复！】',
         'id'    => 'git_updates_b',
         'onclick'   => "return confirm('你确定要取消更新吗？');",
         'type'  => 'checkbox'
@@ -210,14 +210,14 @@ $options = array(
         'std'   => 6
     ),
     array(
-        'name'  => '图片自动添加alt以及title',
+        'name'  => '图片自动添加 alt 以及 title',
         'desc'  => '启用',
         'id'    => "git_imgalt_b",
         'type'  => 'checkbox'
     ),
     array(
         'name'  => '外链自动GO跳转',
-        'desc'  => '启用 【启用之后需要新建页面，模板选择Go跳转页面，别名为go】',
+        'desc'  => '启用 【启用之后需要新建页面，模板选择 Go 跳转页面，别名为 go】',
         'id'    => "git_go",
         'type'  => 'checkbox'
     ),
@@ -228,7 +228,7 @@ $options = array(
         'type'  => 'checkbox'
     ),
     array(
-        'name'  => 'Robot.txt优化',
+        'name'  => 'Robot.txt 优化',
         'desc'  => '启用 【开启本项之后，将只对搜索引擎开放首页，页面，文章页，其他一律屏蔽】',
         'id'    => "git_robot_b",
         'type'  => 'checkbox'
@@ -294,7 +294,7 @@ $options = array(
     ),
     array(
         'name'  => '自动首行缩进',
-        'desc'  => '开启 【开启后对文字内容自动首行缩进2格】',
+        'desc'  => '开启 【开启后对文字内容自动首行缩进 2 格】',
         'id'    => 'git_suojin',
         'type'  => 'checkbox'
     ),
@@ -372,7 +372,7 @@ $options = array(
     ),
     array(
         'name'  => '启用',
-        'desc'  => ' 【启用之后，您需要在下面设置用户的评论数字区间】',
+        'desc'  => '【启用之后，您需要在下面设置用户的评论数字区间】',
         'id'    => 'git_vip',
         'type'  => 'checkbox'
     ),
@@ -439,7 +439,7 @@ $options = array(
     ),
     array(
         'name'  => '留言链接二维码',
-        'desc'  => '启用  【开启之后，您的留言者的网站会生成一个二维码】',
+        'desc'  => '启用 【开启之后，您的留言者的网站会生成一个二维码】',
         'id'    => "git_autherqr_b",
         'type'  => 'checkbox'
     ),
@@ -905,21 +905,21 @@ $options = array(
         'desc'  => '填写新浪微博个人主页链接',
         'id'    => 'git_weibo',
         'type'  => 'text',
-        'std'   => 'http://weibo.com/igooglo'
+        'std'   => 'http://weibo.com/'
     ),
     array(
         'name'  => '腾讯微博',
         'desc'  => '填写腾讯微博个人主页链接',
         'id'    => 'git_tqq',
         'type'  => 'text',
-        'std'   => 'http://t.qq.com/sp865113728'
+        'std'   => 'http://t.qq.com/'
     ),
     array(
         'name'  => '腾讯微信',
         'desc'  => '请输入您的微信号',
         'id'    => 'git_weixin',
         'type'  => 'text',
-        'std'   => 'yunluoV587'
+        'std'   => ''
     ),
     array(
         'name'  => '微信二维码',
@@ -933,7 +933,7 @@ $options = array(
         'desc'  => '直接输入QQ号即可',
         'id'    => 'git_qqContact',
         'type'  => 'text',
-        'std'   => '865113728'
+        'std'   => ''
     ),
     array(
         'name'  => 'Email',
@@ -947,14 +947,14 @@ $options = array(
         'desc'  => '',
         'id'    => 'git_baidu',
         'type'  => 'text',
-        'std'   => 'http://tieba.baidu.com/home/main?un=%E6%97%A0%E6%B3%95%E8%AF%89%E8%AF%B4%E7%9A%84%E5%90%9F%E8%8D%A1&ie=utf-8'
+        'std'   => ''
     ),
     array(
         'name'  => '支付宝',
         'desc'  => '',
         'id'    => 'git_pay',
         'type'  => 'text',
-        'std'   => 'sp91@qq.com'
+        'std'   => ''
     ),
     array(
         'name'  => '支付宝二维码',
@@ -1538,7 +1538,7 @@ function git_options_page() {
             $dxycontent = curl_exec($ch);
             echo $dxycontent;
         } else {
-            echo '汗！貌似您的服务器尚未开启curl扩展，无法收到来自云落的通知，请联系您的主机商开启，本地调试请无视';
+            echo '您的服务器尚未开启 curl 扩展，无法收到来自 Andls 的通知，请联系您的主机商开启';
         }
     ?>
     </div>

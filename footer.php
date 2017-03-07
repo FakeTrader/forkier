@@ -26,7 +26,7 @@ if (git_get_option('git_footcode')) echo git_get_option('git_footcode'); ?> <spa
 <span class="trackcode pull-right"><?php
 if (git_get_option('git_track')) echo git_get_option('git_track'); ?></span></div></div></footer>
 <?php
-if (git_get_option('git_copydialog_b') && is_singular()) echo '<script type="text/javascript">document.body.oncopy=function(){alert("复制成功！若要转载请务必保留原文链接，申明来源，谢谢合作！");}</script>'; ?>
+if (git_get_option('git_copydialog_b') && is_singular()) echo '<script type="text/javascript">document.body.oncopy=function(){alert("复制成功！转载时请务必注明署名和原文链接，谢谢合作！");}</script>'; ?>
 <?php
 if (git_get_option('git_topnav_b') && !G_is_mobile()) { ?>
 <script type="text/Javascript">

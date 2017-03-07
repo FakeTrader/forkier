@@ -2278,7 +2278,7 @@ function get_author_class($comment_author_email, $user_id){
 		echo '<a class="vip7" title="评论达人 LV.7"></a>';
 }
 endif;
-//取消后台登陆错误的提示
+//取消后台登陆错误的抖动提示
 function git_wps_login_error() {
         remove_action('login_head', 'wp_shake_js', 12);
 }
