@@ -1530,7 +1530,7 @@ function git_options_page() {
 
     <?php
                 if (function_exists('curl_init')) {
-            $url = "https://coding.net/u/googlo/p/File/git/raw/master/notice.txt";
+            $url = "https://raw.githubusercontent.com/AndlsH/forkier/master/inc/notice.txt";
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
