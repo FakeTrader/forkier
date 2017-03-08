@@ -12,8 +12,8 @@
 */
 @font-face {
   font-family: FontAwesome;
-  src: url(css/fonts/fontawesome-webfont.eot?v=4.1.0);
-  src: url(css/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0) format('embedded-opentype'),url(css/fonts/fontawesome-webfont.woff?v=4.1.0) format('woff'),url(css/fonts/fontawesome-webfont.ttf?v=4.1.0) format('truetype'),url(css/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular) format('svg');
+  src: url(assets/fonts/fontawesome-webfont.eot?v=4.1.0);
+  src: url(assets/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0) format('embedded-opentype'),url(assets/fonts/fontawesome-webfont.woff?v=4.1.0) format('woff'),url(assets/fonts/fontawesome-webfont.ttf?v=4.1.0) format('truetype'),url(assets/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular) format('svg');
   font-weight: 400;
   font-style: normal
 }
@@ -7005,7 +7005,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
   z-index: 60;
   height: 7.1em;
   width: 7.1em;
-  background-image: url(css/img/arrows.png);
+  background-image: url(assets/img/arrows.png);
   background-size: 200%
 }
 
@@ -7053,11 +7053,11 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 }
 
 #wowslider-container1 .ws_pause {
-  background-image: url(css/img/pause.png)
+  background-image: url(assets/img/pause.png)
 }
 
 #wowslider-container1 .ws_play {
-  background-image: url(css/img/play.png)
+  background-image: url(assets/img/play.png)
 }
 
 #wowslider-container1 .ws_pause:hover,#wowslider-container1 .ws_play:hover {
@@ -7446,7 +7446,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 
 #sc_notice {
   color: #7da33c;
-  background: #ecf2d6 url(css/img/sc_notice.png) -1px -1px no-repeat;
+  background: #ecf2d6 url(assets/img/sc_notice.png) -1px -1px no-repeat;
   border: 1px solid #aac66d;
   overflow: hidden;
   margin: 10px 0;
@@ -7455,7 +7455,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 
 #sc_warn {
   color: #ad9948;
-  background: #fff4b9 url(css/img/sc_warn.png) -1px -1px no-repeat;
+  background: #fff4b9 url(assets/img/sc_warn.png) -1px -1px no-repeat;
   border: 1px solid #eac946;
   overflow: hidden;
   margin: 10px 0;
@@ -7464,7 +7464,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 
 #sc_error {
   color: #c66;
-  background: #ffecea url(css/img/sc_error.png) -1px -1px no-repeat;
+  background: #ffecea url(assets/img/sc_error.png) -1px -1px no-repeat;
   border: 1px solid #ebb1b1;
   overflow: hidden;
   margin: 10px 0;
@@ -7473,7 +7473,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 
 #sc_tips {
   color: #777;
-  background: #eaeaea url(css/img/sc_tips.png) -1px -1px no-repeat;
+  background: #eaeaea url(assets/img/sc_tips.png) -1px -1px no-repeat;
   border: 1px solid #ccc;
   overflow: hidden;
   margin: 10px 0;
@@ -7482,7 +7482,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 
 #sc_blue {
   color: #4d99d2;
-  background: #dbe7f8 url(css/img/sc_blue.png) -1px -1px no-repeat;
+  background: #dbe7f8 url(assets/img/sc_blue.png) -1px -1px no-repeat;
   border: 1px solid #4d99d2;
   overflow: hidden;
   margin: 10px 0;
@@ -7694,7 +7694,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 }
 
 #fancybox-loading,.fancybox-close,.fancybox-next span,.fancybox-prev span {
-  background-image: url(css/img/fancybox_sprite.png)
+  background-image: url(assets/img/fancybox_sprite.png)
 }
 
 #fancybox-loading {
@@ -7712,7 +7712,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 #fancybox-loading div {
   width: 44px;
   height: 44px;
-  background: url(css/img/fancybox_loading.gif) center center no-repeat
+  background: url(assets/img/fancybox_loading.gif) center center no-repeat
 }
 
 .fancybox-close {
@@ -7732,7 +7732,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
   height: 100%;
   cursor: pointer;
   text-decoration: none;
-  background: transparent url(css/img/blank.gif);
+  background: transparent url(assets/img/blank.gif);
   -webkit-tap-highlight-color: transparent;
   z-index: 8040
 }
@@ -7791,7 +7791,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
   overflow: hidden;
   display: none;
   z-index: 8010;
-  background: url(css/img/fancybox_overlay.png)
+  background: url(assets/img/fancybox_overlay.png)
 }
 
 .fancybox-overlay-fixed {
@@ -8285,7 +8285,7 @@ pre.prettyprint {
 }
 
 .slick-loading .slick-list {
-  background: #fff url(css/img/ajax-loader.gif) center center no-repeat
+  background: #fff url(assets/img/ajax-loader.gif) center center no-repeat
 }
 
 .slick-list.dragging {
@@ -8356,8 +8356,8 @@ pre.prettyprint {
 
 @font-face {
   font-family: slick;
-  src: url(css/fonts/slick.eot);
-  src: url(css/fonts/slick.eot?#iefix) format("embedded-opentype"),url(css/fonts/slick.woff) format("woff"),url(css/fonts/slick.ttf) format("truetype"),url(css/fonts/slick.svg#slick) format("svg");
+  src: url(assets/fonts/slick.eot);
+  src: url(assets/fonts/slick.eot?#iefix) format("embedded-opentype"),url(assets/fonts/slick.woff) format("woff"),url(assets/fonts/slick.ttf) format("truetype"),url(assets/fonts/slick.svg#slick) format("svg");
   font-weight: 400;
   font-style: normal
 }
@@ -8654,7 +8654,7 @@ input {
 }
 
 .vip,.vip1,.vip2,.vip3,.vip4,.vip5,.vip6,.vip7,.vp {
-  background: url(css/img/vip.png) no-repeat;
+  background: url(assets/img/vip.png) no-repeat;
   display: inline-block;
   overflow: hidden;
   border: none
@@ -8787,7 +8787,7 @@ input {
 }
 
 .speedbar {
-  background-image: url(css/img/volume.png);
+  background-image: url(assets/img/volume.png);
   background-repeat: no-repeat;
   background-position: 1% 50%
 }
@@ -9084,7 +9084,7 @@ input {
 }
 
 #download_button span {
-  background: url(css/img/dl_icon.png) no-repeat scroll 0 0 #c83400;
+  background: url(assets/img/dl_icon.png) no-repeat scroll 0 0 #c83400;
   display: block;
   width: 40px;
   height: 40px;

@@ -2716,7 +2716,7 @@ function(a) {
       300)
     }),
     a(".content .avatar, .sidebar .avatar, .pagecontent .avatar").lazyload({
-      placeholder: _deel.url + "/css/img/default.png",
+      placeholder: _deel.url + "/assets/img/default.png",
       event: "scrollstop"
     }),
     a(".wp-smiley").lazyload({
@@ -2877,7 +2877,7 @@ function(a) {
             a("#commentform .comt-box").append('<div id="comment-smilies" class="hide"></div>'),
             l = "";
             for (key in k.smilies) {
-              l += '<img data-simle="' + key + '" data-type="comment-smilie" src="' + _deel.url + "/css/img/smilies/icon_" + k.smilies[key] + '.gif">'
+              l += '<img data-simle="' + key + '" data-type="comment-smilie" src="' + _deel.url + "/assets/img/smilies/icon_" + k.smilies[key] + '.gif">'
             }
             a("#comment-smilies").html(l)
           }
