@@ -310,6 +310,13 @@ function footerScript() {
     }
 }
 add_action('wp_enqueue_scripts', 'footerScript');
+function stem(){
+    if ( is_single()) {
+        wp_register_style('math', get_template_directory_uri() . '/assets/css/MathJax.css', false, '1.0');
+        wp_enqueue_style('math');
+    }
+}
+add_action('wp_enqueue_scripts', 'stem');
 if (!function_exists('deel_paging')):
     function deel_paging() {
         $p = 4;
