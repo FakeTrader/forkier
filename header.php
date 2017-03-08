@@ -59,7 +59,7 @@ echo $sr_2
 ?>]}
 </script>
 <!--[if lt IE 9]><script src="<?php
-echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script><![endif]-->
+echo esc_url( get_template_directory_uri() ); ?>/assets/js/html5.js"></script><![endif]-->
 <?php
 echo get_post_meta($post->ID, 'git_customer', true); ?>
 </head>
