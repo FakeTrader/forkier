@@ -1130,7 +1130,7 @@ add_filter('login_headertitle', create_function(false, "return get_bloginfo('nam
 /*
  * 强制阻止WordPress代码转义，关于代码高亮可以看这里http://googlo.me/archives/2986.html
 */
-function git_esc_html($content) {
+/*function git_esc_html($content) {
     $regex = '/(<pre\s+[^>]*?class\s*?=\s*?[",\'].*?prettyprint.*?[",\'].*?>)(.*?)(<\/pre>)/sim';
     return preg_replace_callback($regex, git_esc_callback, $content);
 }
@@ -1143,15 +1143,15 @@ function git_esc_callback($matches) {
     return $tag_open . $content . $tag_close;
 }
 add_filter('the_content', 'git_esc_html', 2);
-add_filter('comment_text', 'git_esc_html', 2);
+add_filter('comment_text', 'git_esc_html', 2);*/
 
 //强制兼容<pre>
-function git_prettify_replace($text){
+/*function git_prettify_replace($text){
 $replace = array( '<pre>' => '<pre class="prettyprint" >' );
 $text = str_replace(array_keys($replace), $replace, $text);
 return $text;
 }
-add_filter('the_content', 'git_prettify_replace');
+add_filter('the_content', 'git_prettify_replace');*/
 //首页隐藏一些分类
 function exclude_category_home($query) {
     if ($query->is_home) {
