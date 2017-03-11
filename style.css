@@ -8624,7 +8624,7 @@ pre.prettyprint {
 .article-content h3 {
   border-left: 2px solid #0095ff;
   background-color: #fbfbfb;
-  padding-left: 1em
+  padding-left: 10px
 }
 
 input {
