@@ -1122,12 +1122,12 @@ add_shortcode('reply', 'reply_to_read');
 
 //bing美图自定义登录页面背景
 function custom_login_head() {
-    $str = file_get_contents('http://cn.bing.com/HPImageArchive.aspx?idx=0&n=1');
+    $str = file_get_contents('https://cn.bing.com/HPImageArchive.aspx?idx=0&n=1');
     if (preg_match("/<url>(.+?)<\/url>/ies", $str, $matches)) {
         if(git_get_option('git_loginbg')){
             $imgurl = git_get_option('git_loginbg');
         }else{
-            $imgurl = 'http://cn.bing.com' . $matches[1];
+            $imgurl = 'https://cn.bing.com' . $matches[1];
         }
         echo '<style type="text/css">#reg_passmail{display:none!important}body{background: url(' . $imgurl . ');background-repeat: no-repeat;background-position: top center;background-attachment: fixed;background-size: cover;width: 100%!important;height: 100%!important;}.login label,a {font-weight: bold;}.login-action-register #login{padding: 5% 0 0;}.login-action-register h1 {display: none;}.login p {line-height: 1;}.login form {margin-top: 10px;padding: 16px 24px 16px;}h1 a { background-image:url(' . home_url() . '/favicon.ico)!important;width:32px;height:32px;-webkit-border-radius:50px;-moz-border-radius:50px;border-radius:50px;}#registerform,#loginform {background-color:rgba(251,251,251,0.3)!important;}.login label,a{color:#000!important;}</style>';
     }
@@ -1297,7 +1297,7 @@ add_shortcode('dltable', 'xdltable');
 //网易云音乐
 function music163($atts) {
     extract(shortcode_atts(array("id" => "" ) , $atts));
-    return '<iframe style="width:100%;max-height:86px;" frameborder="no" border="0" marginwidth="0" marginheight="0" src="http://music.163.com/outchain/player?type=2&id=' . $id . '&auto=1&height=66"></iframe>';
+    return '<iframe style="width:100%;max-height:86px;" frameborder="no" border="0" marginwidth="0" marginheight="0" src="https://music.163.com/outchain/player?type=2&id=' . $id . '&auto=1&height=66"></iframe>';
 }
 add_shortcode('netmusic', 'music163');
 // add youku using iframe
@@ -1307,10 +1307,10 @@ function wp_iframe_handler_youku($matches, $attr, $url, $rawattr) {
     } else {
         $height = 485;
     }
-    $iframe = '<iframe width=100% height=' . $height . 'px src="http://player.youku.com/embed/' . esc_attr($matches[1]) . '" frameborder=0 allowfullscreen></iframe>';
+    $iframe = '<iframe width=100% height=' . $height . 'px src="https://player.youku.com/embed/' . esc_attr($matches[1]) . '" frameborder=0 allowfullscreen></iframe>';
     return apply_filters('iframe_youku', $iframe, $matches, $attr, $url, $ramattr);
 }
-wp_embed_register_handler('youku_iframe', '#http://v.youku.com/v_show/id_(.*?).html#i', 'wp_iframe_handler_youku');
+wp_embed_register_handler('youku_iframe', '#https://v.youku.com/v_show/id_(.*?).html#i', 'wp_iframe_handler_youku');
 // add tudou using iframe
 function wp_iframe_handler_tudou($matches, $attr, $url, $rawattr) {
     if (G_is_mobile()) {
@@ -2365,7 +2365,7 @@ add_filter('retrieve_password_message', git_reset_password_message, null, 2);
 if(git_get_option('git_admin')):
 function git_login_protection() {
     if ($_GET[''.git_get_option('git_admin_q').''] !== ''.git_get_option('git_admin_a').'')
-    header('Location: http://www.baidu.com');/* 不用密码登录，直接滚到百度去 */
+    header('Location: https://www.baidu.com');/* 不用密码登录，直接滚到百度去 */
 }
 add_action('login_enqueue_scripts', 'git_login_protection');
 endif;
