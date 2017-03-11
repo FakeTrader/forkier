@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="content-wrap">
-	<?php echo '<style type="text/css">
+  <?php echo '<style type="text/css">
 .cont { margin:0 auto; line-height:20px; }
 .c1 { text-align:center; }
 .c1 .img1, .c1 .img2{ margin-top:80px; }
@@ -19,12 +19,12 @@
 .c2 a.sr:active{ background:url("'.get_template_directory_uri().'/assets/img/04.png") 0 -48px; }
 .c3{ height:180px; text-align:center; color:#999; font-size:12px; }
 </style>
-		<div class="cont">
-			<div class="c1"><img src="'.get_template_directory_uri().'/assets/img/01.png" class="img1" /></div>
-			<h2>404页面咯~你访问的页面不存在</h2>
-			<div class="c2"><a href="javascript:;" class="re" onclick="javascript:location.reload();">刷新本页</a><a href="/" class="home">网站首页</a></div>
-			<div class="c3">通过搜索把你想找的文章给揪出来吧...</div>
-		</div>
+    <div class="cont">
+      <div class="c1"><img src="'.get_template_directory_uri().'/assets/img/01.png" class="img1" /></div>
+      <h2>404页面咯~你访问的页面不存在</h2>
+      <div class="c2"><a href="javascript:;" class="re" onclick="javascript:location.reload();">刷新本页</a><a href="/" class="home">网站首页</a></div>
+      <div class="c3">通过搜索把你想找的文章给揪出来吧...</div>
+    </div>
 </div>';?>
 <?php if( git_get_option('git_404ad') ) echo git_get_option('git_404ad'); ?>
 <?php get_footer(); ?>

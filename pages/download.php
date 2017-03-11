@@ -1,7 +1,7 @@
 <?php
 /*
-	template name: 下载模板页面
-	description: template for Git theme
+  template name: 下载模板页面
+  description: template for Git theme
 */
 get_header();
 ?>
@@ -18,42 +18,42 @@ empty($values3) ? Header('Location:/') : $theCode3 = $values3[0];
 ?>
 <style type="text/css">#filelink a:hover{background:#4094EF none repeat scroll 0 0;color:#FFF!important;transition-duration:.3s;border-color:#FFF}#filelink a{margin:20px 15px 20px 0px;color:#4094EF!important;padding:5px 50px;font-family:微软雅黑,"Microsoft YaHei";font-size:19px;border:1px solid #4094EF;box-shadow:0 1px 3px rgba(0,0,0,.1)}</style>
 <div class="pagewrapper clearfix">
-		<header class="pageheader clearfix">
-			<h1 class="pull-left">
-				<a href="<?php the_permalink($pid) ?>"><?php echo $title; ?></a>
-			</h1>
-			<div class="pull-right"><!-- 百度分享 -->
-	<?php deel_share() ?>
-			</div>
-		</header>
-		<?php while (have_posts()) : the_post(); ?>
-			<div class="article-content">
+    <header class="pageheader clearfix">
+      <h1 class="pull-left">
+        <a href="<?php the_permalink($pid) ?>"><?php echo $title; ?></a>
+      </h1>
+      <div class="pull-right"><!-- 百度分享 -->
+  <?php deel_share() ?>
+      </div>
+    </header>
+    <?php while (have_posts()) : the_post(); ?>
+      <div class="article-content">
 <!-- 文章上方 -->
 <?php if( git_get_option('git_downloadad1') ) echo git_get_option('git_downloadad1'); ?>
             <h2>资源信息</h2>
-			<div class="alert alert-success">
-			<ul class="infos clearfix">
+      <div class="alert alert-success">
+      <ul class="infos clearfix">
                 <li>资源名称：<?php echo $theCode1; ?></li>
-				<li>文件大小：<?php echo $theCode2; ?></li>
-				<li>更新日期：<?php echo get_post($pid)->post_modified; ?></li>
-				</ul>
-			</div>
+        <li>文件大小：<?php echo $theCode2; ?></li>
+        <li>更新日期：<?php echo get_post($pid)->post_modified; ?></li>
+        </ul>
+      </div>
             <h2>下载地址</h2>
             <div id="filelink">
-				<center><?php echo $theCode3; ?></center>
+        <center><?php echo $theCode3; ?></center>
             </div>
-			<div class="clearfix"></div>
+      <div class="clearfix"></div>
             <h2>下载说明</h2>
-			<div class="alert alert-info" role="alert">
+      <div class="alert alert-info" role="alert">
             <?php if( git_get_option('git_dlpage_dl') ) echo git_get_option('git_dlpage_dl'); ?>
             </div>
             <h2>免责声明</h2>
-			<div class="alert alert-warning" role="alert">
-			<p><?php if( git_get_option('git_dlpage_mz') ) echo git_get_option('git_dlpage_mz'); ?></p>
-			</div>
+      <div class="alert alert-warning" role="alert">
+      <p><?php if( git_get_option('git_dlpage_mz') ) echo git_get_option('git_dlpage_mz'); ?></p>
+      </div>
 <!-- 下载页横幅 -->
 <?php if( git_get_option('git_downloadad2') ) echo git_get_option('git_downloadad2'); ?>
-			</div>
-		<?php comments_template('', true); endwhile;  ?>
+      </div>
+    <?php comments_template('', true); endwhile;  ?>
 </div>
 <?php get_footer(); ?>

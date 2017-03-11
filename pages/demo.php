@@ -1,7 +1,7 @@
 <?php
 /*
-	template name: 代码演示
-	description: template for Git theme
+  template name: 代码演示
+  description: template for Git theme
 */
 $pid = isset( $_GET['pid'] ) ? trim(htmlspecialchars($_GET['pid'], ENT_QUOTES)) : '';
 if( !$pid ) { wp_redirect( home_url() );}
@@ -35,8 +35,8 @@ a:hover{color:#3071A9}
 <body>
 <h1 class="demo-title">代码演示: <?php echo $title ?> -- <?php echo bloginfo('name'); ?></h1>
 <div class="demo-header">
-	<a class="demo-name" href="<?php echo get_permalink($pid); ?>">&laquo; <?php echo $title ?></a>
-	<span style="display:none"><?php if( git_get_option('git_track') != '' ) echo git_get_option('git_track'); ?></span>
+  <a class="demo-name" href="<?php echo get_permalink($pid); ?>">&laquo; <?php echo $title ?></a>
+  <span style="display:none"><?php if( git_get_option('git_track') != '' ) echo git_get_option('git_track'); ?></span>
 </div>
 <div class="demo-container demo"><?php echo $theCode; ?></div>
 <div style="display:none"><?php if( git_get_option('git_track') ) echo git_get_option('git_track'); ?></div>

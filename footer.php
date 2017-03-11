@@ -1,20 +1,21 @@
 </section>
 <?php
 if (git_get_option('git_superfoot_b') && !G_is_mobile()) { ?>
-<div id="footbar" style="border-top: 2px solid #8E44AD;"><ul>
-<li><p class="first"><?php
+<div id="footbar" style="border-top: 2px solid #8E44AD;">
+  <ul>
+    <li><p class="first"><?php
     echo git_get_option('git_foottitle1'); ?></p><span max-width="220px"><?php
     echo git_get_option('git_footconent1'); ?></span></li>
-<li><p class="second"><?php
+    <li><p class="second"><?php
     echo git_get_option('git_foottitle2'); ?></p><span max-width="220px"><?php
     echo git_get_option('git_footconent2'); ?></span></li>
-<li><p class="third"><?php
+    <li><p class="third"><?php
     echo git_get_option('git_foottitle3'); ?></p><span max-width="220px"><?php
     echo git_get_option('git_footconent3'); ?></span></li>
-<li><p class="fourth"><?php
+    <li><p class="fourth"><?php
     echo git_get_option('git_foottitle4'); ?></p><span max-width="220px"><?php
     echo git_get_option('git_footconent4'); ?></span></li>
-</ul>
+  </ul>
 </div>
 <?php
 } ?>
@@ -31,12 +32,12 @@ if (git_get_option('git_copydialog_b') && is_singular()) echo '<script type="tex
 if (git_get_option('git_topnav_b') && !G_is_mobile()) { ?>
 <script type="text/Javascript">
 $(function(){
-	$('#nav-header').posfixed({
-		distance : 0,
-		pos : 'top',
-		type : 'while',
-		hide : false
-	});
+  $('#nav-header').posfixed({
+    distance : 0,
+    pos : 'top',
+    type : 'while',
+    hide : false
+  });
 });
 </script>
 <?php
@@ -53,7 +54,7 @@ if (git_get_option('git_footercode')) echo git_get_option('git_footercode'); ?>
 wp_footer();
 global $dHasShare;
 if ($dHasShare == true) {
-    echo '<script>with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="' . get_template_directory_uri() . '/assets/js/share.js?v=89860593.js?cdnversion="+~(-new Date()/36e5)];</script>';
+  echo '<script>with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="' . get_template_directory_uri() . '/assets/js/share.js?v=89860593.js?cdnversion="+~(-new Date()/36e5)];</script>';
 }
 ?>
 </body>

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="content-wrap">
-	<div class="content">
+  <div class="content">
 <?php
 if (git_get_option('git_singleMenu_b')) echo '<div class="breadcrumbs">' . deel_breadcrumbs() . '</div>'; 
 if(git_get_option('git_suojin')){echo '<style type="text/css">.article-content p {text-indent: 2em;}.article-content p a,.article-content p video,.article-content table p{text-indent: 0 !important;}</style>';}
@@ -16,21 +16,21 @@ if (git_get_option('git_prettify') == 'monokai') {
     echo '<style type="text/css">.prettyprint .pln{color:#bd3613}.prettyprint .str{color:#269186}.prettyprint .kwd{color:#859900}.prettyprint .com{color:#586175;font-style:italic}.prettyprint .typ{color:#b58900}.prettyprint .lit{color:#2aa198}.prettyprint .pun{color:#839496}.prettyprint .opn{color:#839496}.prettyprint .clo{color:#839496}.prettyprint .tag{color:#268bd2}.prettyprint .atn{color:#586175}.prettyprint .atv{color:#2aa198}.prettyprint .dec{color:#268bd2}.prettyprint .var{color:#268bd2}.prettyprint.fun{color:red}pre.prettyprint{background-color:#042029;padding:10px;border:1px solid #e1e1e8}ol.linenums{color:#4c666c;margin:0 0 0 40px}ol.linenums li{line-height:18px;padding-left:12px}.prettyprint.linenums,pre.prettyprint.linenums{box-shadow:inset 40px 0 0 #020e13;color:#809189}</style>';
 }
 ?>
-		<?php
+    <?php
 while (have_posts()):
     the_post(); ?>
-		<header class="article-header">
-			<h1 class="article-title"><a href="<?php
+    <header class="article-header">
+      <h1 class="article-title"><a href="<?php
     the_permalink() ?>"><?php
     the_title(); ?></a></h1>
-			<div class="meta">
-				<?php
+      <div class="meta">
+        <?php
     $category = get_the_category();
     if ($category[0]) {
         echo '<span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><a href="' . get_category_link($category[0]->term_id) . '"> ' . $category[0]->cat_name . '</a></span>';
     }
 ?>
-				<span class="muted"><i class="fa fa-user"></i> <a href="<?php
+        <span class="muted"><i class="fa fa-user"></i> <a href="<?php
     echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php
     echo get_the_author() ?></a></span>
     
@@ -38,61 +38,61 @@ while (have_posts()):
     $zhuanzai = get_post_meta($post->ID, 'git_zhuanzai_name', true);
     if ( $zhuanzai ) echo '<span class="muted"><i class="fa fa-info-circle"></i> 来源：<a rel="nofollow" target="_blank" href="' . get_post_meta($post->ID, 'git_zhuanzai_link', true) . '">' .get_post_meta($post->ID, 'git_zhuanzai_name', true) . '</a></span>'; ?>
     
-				<time class="muted"><i class="fa fa-clock-o"></i> <?php
+        <time class="muted"><i class="fa fa-clock-o"></i> <?php
     echo timeago(get_gmt_from_date(get_the_time('Y-m-d G:i:s'))) ?></time>
-				<span class="muted"><i class="fa fa-eye"></i> <?php
+        <span class="muted"><i class="fa fa-eye"></i> <?php
     deel_views('次浏览'); ?></span>
-				<?php
+        <?php
     if (git_get_option('git_baidurecord_b') && function_exists('curl_init')) { ?><span class="muted"><i class="fa fa-flag"></i> <?php
         baidu_record(); ?></span><?php
     } ?>
-				<?php
+        <?php
     if (comments_open()) echo '<span class="muted"><i class="fa fa-comments-o"></i> <a href="' . get_comments_link() . '">' . get_comments_number('0', '1', '%') . '个评论</a></span>'; ?>
-				<?php
+        <?php
     if (git_get_option('git_qr_b') && !G_is_mobile()) { ?><span class="muted"><i class="fa fa-qrcode"></i> <a style="cursor : pointer;" onMouseOver="document.all.qr.style.visibility=''" onMouseOut="document.all.qr.style.visibility='hidden'">扫描二维码</a>
-				<span id="qr" style="visibility: hidden;"><img style="position:absolute;z-index:99999;" src="http://s.jiathis.com/qrcode.php?url=<?php
+        <span id="qr" style="visibility: hidden;"><img style="position:absolute;z-index:99999;" src="http://s.jiathis.com/qrcode.php?url=<?php
         the_permalink(); ?>"/></span></span><?php
     } ?>
-				<span class="muted"><?php
+        <span class="muted"><?php
     edit_post_link('[编辑]'); ?></span>
-			</div>
-		<?php 
-		$jiage = get_post_meta($post->ID, 'git_product_jiage', true);
-		$fahuodi = get_post_meta($post->ID, 'git_product_fahuodi', true);
-		$cpjianjie = get_post_meta($post->ID, 'git_product_cpjianjie', true);
-		$tblink = get_post_meta($post->ID, 'git_product_tblink', true);
-		if(get_post_type() == 'product'){
-		    echo '<hr /><div class="products" id="products">
-			<div class="product-img"><a target="_blank" rel="nofollow" href="' . get_post_meta($post->ID, 'git_product_tblink', true) . '"><img src="' . get_post_meta($post->ID, 'git_thumb', true) . '" width="360px" height="360px" alt="" /></a></div>
-			<div class="product-detail">
-			    <div class="product-title">
-				<h2>'.get_the_title().'</h2>
-				<p>产品简介：' . get_post_meta($post->ID, 'git_product_cpjianjie', true) . '</p>
-			    </div>
-			    <div class="product row">
-				<ul>
-					<li class="product-price"><span class="dt">商品售价</span><strong><em>¥</em>' . get_post_meta($post->ID, 'git_product_jiage', true) . ' <em>(元)</em></strong></li>
-					<li class="product-amount"><span class="dt">商品数量</span><span class="dt-num">999</span></li>
-					<li class="product-comments"><span class="dt">商品评论</span><span class="dt-num"><a href="' . get_comments_link() . '">' . get_comments_number('0', '1', '%') . '个评论</a></span></li>
-					<li class="product-place"><span class="dt">商品发货地</span><span class="dt-num">' . get_post_meta($post->ID, 'git_product_fahuodi', true) . '</span></li>
-					<li class="product-time"><span class="dt">发货时间</span><span class="dt-num">卖家承诺24小时内发货</span></li>
-					<li class="product-market"><span class="dt">商品编号</span>' . get_the_id() . '</li>
+      </div>
+    <?php 
+    $jiage = get_post_meta($post->ID, 'git_product_jiage', true);
+    $fahuodi = get_post_meta($post->ID, 'git_product_fahuodi', true);
+    $cpjianjie = get_post_meta($post->ID, 'git_product_cpjianjie', true);
+    $tblink = get_post_meta($post->ID, 'git_product_tblink', true);
+    if(get_post_type() == 'product'){
+        echo '<hr /><div class="products" id="products">
+      <div class="product-img"><a target="_blank" rel="nofollow" href="' . get_post_meta($post->ID, 'git_product_tblink', true) . '"><img src="' . get_post_meta($post->ID, 'git_thumb', true) . '" width="360px" height="360px" alt="" /></a></div>
+      <div class="product-detail">
+          <div class="product-title">
+        <h2>'.get_the_title().'</h2>
+        <p>产品简介：' . get_post_meta($post->ID, 'git_product_cpjianjie', true) . '</p>
+          </div>
+          <div class="product row">
+        <ul>
+          <li class="product-price"><span class="dt">商品售价</span><strong><em>¥</em>' . get_post_meta($post->ID, 'git_product_jiage', true) . ' <em>(元)</em></strong></li>
+          <li class="product-amount"><span class="dt">商品数量</span><span class="dt-num">999</span></li>
+          <li class="product-comments"><span class="dt">商品评论</span><span class="dt-num"><a href="' . get_comments_link() . '">' . get_comments_number('0', '1', '%') . '个评论</a></span></li>
+          <li class="product-place"><span class="dt">商品发货地</span><span class="dt-num">' . get_post_meta($post->ID, 'git_product_fahuodi', true) . '</span></li>
+          <li class="product-time"><span class="dt">发货时间</span><span class="dt-num">卖家承诺24小时内发货</span></li>
+          <li class="product-market"><span class="dt">商品编号</span>' . get_the_id() . '</li>
                 </ul>
-			    </div>
-			    <div class="product-buy">
-                	<a class="lhb" href="' . get_post_meta($post->ID, 'git_product_tblink', true) . '" target="_blank" rel="nofollow" ><i class="fa fa-shopping-cart"></i> 立即购买</a>
+          </div>
+          <div class="product-buy">
+                  <a class="lhb" href="' . get_post_meta($post->ID, 'git_product_tblink', true) . '" target="_blank" rel="nofollow" ><i class="fa fa-shopping-cart"></i> 立即购买</a>
                 </div></div>';}?>
-		</header>
+    </header>
 <?php
     if (git_get_option('git_adpost_01') && get_post_type() !== 'product') echo '<div class="banner banner-post">' . git_get_option('git_adpost_01') . '</div>'; ?>
 <?php
     if (wp_is_mobile()): ?><?php
         if (git_get_option('Mobiled_adpost_01')) echo '<div class="banner-post mobileads">' . git_get_option('Mobiled_adpost_01') . '</div>'; ?><?php
     endif; ?>
-		<article class="article-content">
-			<?php
+    <article class="article-content">
+      <?php
     the_content(); ?>
-		<?php
+    <?php
     wp_link_pages(array(
         'before' => '<div class="fenye">',
         'after' => '',
@@ -116,7 +116,7 @@ while (have_posts()):
     )); ?>
 
 <div class="article-social">
-			<a href="javascript:;" data-action="ding" data-id="<?php
+      <a href="javascript:;" data-action="ding" data-id="<?php
     the_ID(); ?>" id="Addlike" class="action<?php
     if (isset($_COOKIE['bigfa_ding_' . $post->ID])) echo ' actived'; ?>"><i class="fa fa-heart-o"></i>喜欢 (<span class="count"><?php
     if (get_post_meta($post->ID, 'bigfa_ding', true)) {
@@ -127,19 +127,19 @@ while (have_posts()):
     if (git_get_option('git_bdshare_b')) echo '<span class="or"><style>.article-social .weixin:hover{background:#fff;}</style><a class="weixin" style="border-bottom:0px;font-size:15pt;cursor:pointer;">赏<div class="weixin-popover"><div class="popover bottom in"><div class="arrow"></div><div class="popover-title"><center>[' . git_get_option('git_pay') . ']</center></div><div class="popover-content"><img width="200px" height="200px" src="' . git_get_option('git_pay_qr') . '" ></div></div></div></a></span>';
     deel_share(); ?>
 </div>
-	</article>
-		<?php
+  </article>
+    <?php
 endwhile; ?>
-		<footer class="article-footer">
-			<?php
+    <footer class="article-footer">
+      <?php
 the_tags('<div class="article-tags"><i class="fa fa-tags"></i>', '', '</div>'); ?>
 </footer>
-	<nav class="article-nav">
-			<span class="article-nav-prev"><?php
+  <nav class="article-nav">
+      <span class="article-nav-prev"><?php
 previous_post_link('<i class="fa fa-angle-double-left"></i> %link'); ?></span>
-			<span class="article-nav-next"><?php
+      <span class="article-nav-next"><?php
 next_post_link('%link  <i class="fa fa-angle-double-right"></i>'); ?></span>
-		</nav>
+    </nav>
 <?php
 if (git_get_option('git_auther_b')) { ?>
 <div class="sg-author clr">
@@ -197,22 +197,22 @@ if (git_get_option('git_auther_b')) { ?>
 } ?>
 <div id="donatecoffee" style="overflow:auto;display:none;"><img width="400px" height="400px" src="<?php echo git_get_option('git_pay_qr');?>"></div>
 
-		<div class="related_top">
-			<?php
+    <div class="related_top">
+      <?php
 include ('modules/related.php'); ?>
-		</div>
-		<?php
+    </div>
+    <?php
 if (wp_is_mobile()): ?>
-		<?php
-    if (git_get_option('Mobiled_adpost_02')) echo '<div id="comment-ad" class="banner-related mobileads">' . git_get_option('Mobiled_adpost_02') . '</div>'; ?><?php
+    <?php
+  if (git_get_option('Mobiled_adpost_02')) echo '<div id="comment-ad" class="banner-related mobileads">' . git_get_option('Mobiled_adpost_02') . '</div>'; ?><?php
 endif; ?>
-		<?php
+    <?php
 if (git_get_option('git_adpost_02')) echo '<div id="comment-ad" class="banner banner-related">' . git_get_option('git_adpost_02') . '</div>'; ?>
-		<?php
+    <?php
 comments_template('', true); ?>
-		<?php
+    <?php
 if (git_get_option('git_adpost_03')) echo '<div class="banner banner-comment">' . git_get_option('git_adpost_03') . '</div>'; ?>
-	</div>
+  </div>
 </div>
 <?php
 get_sidebar();
